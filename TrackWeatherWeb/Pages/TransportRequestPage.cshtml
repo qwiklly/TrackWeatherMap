@@ -1,0 +1,46 @@
+﻿@page
+@model TransportRequestPageModel
+@{
+	ViewData["Title"] = "TransportRequestPage";
+}
+
+<br />
+<h2>List of utility requests </h2>
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Email address</th>
+			<th>Latitude coordinate (x)</th>
+			<th>Longitude coordinate (y)</th>
+			<th>Comment</th>
+			<th>Time</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var request in Model.Requests)
+		{
+			<tr>
+				<td>@request.Email</td>
+				<td>@request.Coordinate_x</td>
+				<td>@request.Coordinate_y</td>
+				<td>@request.Comment</td>
+				<td>@request.Timestamp</td>
+				<td>
+					<form method="post" asp-page-handler="Delete" asp-route-id="@request.Id" onsubmit="return confirmDelete('@request.Id');">
+						<button type="submit" class="btn btn-danger">Delete</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@section Scripts {
+	<script type="text/javascript">
+		function confirmDelete(id) {
+			return confirm('Do you really want to delete the request with the ID ' + id + '?');
+		}
+	</script>
+}

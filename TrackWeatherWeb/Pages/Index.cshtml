@@ -1,0 +1,70 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<br />
+<h2>Welcome @Model.UserName to the "TrackWeatherMap" application!</h2>
+<p>For full access to the map functionality and other features, please register and log in.</p>
+
+<h3>User functionality:</h3>
+<ul>
+    <li>
+        <strong>Map:</strong>
+        <ul>
+            <li>Right-click on any point on the map to place a marker.</li>
+            <li>Click on the marker to view the current weather information at that location <br />and create a route from your current location or a specified point to the marker.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>User profile:</strong>
+        <ul>
+            <li>Click on the profile icon to log out.</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Administrator functionality:</h3>
+<ul>
+    <li>
+        <strong>Admin panel:</strong>
+        <ul>
+            <li>Login is performed using the following credentials:</li>
+            <li><strong>Email:</strong> admin@example.com</li>
+            <li><strong>Password:</strong> Admin123</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Map:</strong>
+        <ul>
+            <li>Right-click on any point on the map to place a marker.</li>
+            <li>Click on the marker to view the current weather information at that location <br />and create a route from your current location or a specified point to the marker.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Adding users:</strong>
+        <ul>
+            <li>The ability to add new users with different roles: user / admin.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Special transport map:</strong>
+        <ul>
+            <li>Displays markers added by emergency services along the M4 highway.</li>
+            <li>Markers are added through the Swagger interface.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>User management:</strong>
+        <ul>
+            <li>View a list of all users.</li>
+            <li>The ability to delete users.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Transport request management:</strong>
+        <ul>
+            <li>View and delete transport requests.</li>
+        </ul>
+    </li>
+</ul>

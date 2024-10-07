@@ -72,7 +72,7 @@ docker-compose up --build
 
 ![Screenshot 2024-10-07 141557](https://github.com/user-attachments/assets/9f596b97-a2a2-4048-9829-798c28aad1eb)
 
-### Профиль пользователя
+### User Profile
 **Logged In**            |  **Not Logged In**
 :-------------------------:|:-------------------------:
 ![Screenshot 2024-10-07 142324](https://github.com/user-attachments/assets/5b61b23e-c0c0-4f66-924d-5cf65c50d5be)  |  ![Screenshot 2024-10-07 142335](https://github.com/user-attachments/assets/0a87bcf3-c6d4-412e-989d-da52b35707d8)

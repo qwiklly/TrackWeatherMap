@@ -1,82 +1,83 @@
-# КартаПогоды (TrackWeather)
+# TrackWeatherMap
 
-TrackWeather - это приложение для мониторинга погодных условий и построения маршрутов с учетом погодной обстановки. Оно предназначено для путешественников и технических служб, таких как аварийные службы, которым необходимо быстро реагировать на изменения погоды.
+TrackWeatherMap is an application for monitoring weather conditions and planning routes based on weather changes. 
+It is designed for travelers and technical services, such as emergency services, which need to quickly respond to weather changes.
 
-# Основной функционал:
-* Просмотр погоды в любой точке мира
-* Построение маршрутов с учетом погодных условий
-* Регистрация и авторизация пользователей
-* Администрирование: просмотр и управление пользователями, управление транспортными запросами
+# Main Features:
+* View weather anywhere in the world
+* Plan routes considering weather conditions
+* User registration and authentication
+* Administration: view and manage users, manage transport requests
 
-# Используемые технологии:
+# Technologies Used:
 .Net 8, C#, ASP Net, JavaScript, API, MS SQL, Swagger, Unit tests, Docker
 
-## Примеры использования:
-- **Для путешественников:** находите места с хорошей погодой для планирования поездок.
-- **Для коммунальных служб:** отслеживайте районы с неблагоприятной погодой для отправки специального транспорта.
+## Use Cases:
+- **For travelers:** find places with good weather to plan trips.
+- **For utility services:** monitor areas with adverse weather to dispatch special vehicles.
 
-### Используемая технология аутентификации:
-- Аутентификация пользователей осуществляется с использованием Web токенов (JWT).
-- JWT хранится в куки, тем самым сессия пользователя сохраняется.
+### Authentication Technology:
+- User authentication is handled using Web Tokens (JWT).
+- JWT is stored in cookies, thus maintaining the user session.
 
-# Шаги для запуска проекта:
-Выполните команду в консоли диспетчера пакетов для обновления базы данных:
+# Steps to launch the project:
+Run the following command in the package manager console to update the database:
 ```
 update-database
 ```
-В файле appsettings.json добавьте ключи разработчика для YandexApi и OpenWeatherApi.
+Add developer keys for YandexApi and OpenWeatherApi in the appsettings.json file.
 
 ![image](https://github.com/user-attachments/assets/b4e9c736-ce4b-4ab8-9194-008861fa3ca7)
 
-**Сборка Docker**
-Соберите Docker image, выполнив команду:
+**Docker Build**
+Build the Docker image by running:
 ```
 docker build -t trackweather/localtrackweather:v1 .
 ```
-Затем раскомментируйте строку подключения к базе данных для Docker.
+Then uncomment the database connection string for Docker.
 
 ![image](https://github.com/user-attachments/assets/0fb95e4b-d5d0-4cfc-9113-1d34443167bd)
 
-Создайте и запустите контейнер:
+Create and run the container:
 ```
 docker-compose up --build
 ```
  
-## Изображения интерфейса 
-### **Начальный экран**
+## Interface images 
+### **Home page**
 
-![Screenshot 2024-09-09 132443](https://github.com/user-attachments/assets/e84515fa-115d-47c8-8762-09e90ce0ee90)
+![Screenshot 2024-10-07 141454](https://github.com/user-attachments/assets/e356d136-24e5-4830-b8a3-90a4dff81273)
 
-### **Окно карты для пользователей**
+### **Weather route map**
 
-![Screenshot 2024-09-09 132754](https://github.com/user-attachments/assets/6a8d78c8-7723-4f70-8c7e-93e90f2106ce)
+![Screenshot 2024-10-07 142313](https://github.com/user-attachments/assets/b81f4293-2369-479b-9793-52648a922441)
 
-### **Окно карты для коммунальных служб**
+### **Utility Service map**
 
-![Screenshot 2024-09-09 132654](https://github.com/user-attachments/assets/45306f26-2dd5-4faa-a3bf-c2939bc604a2)
+![Screenshot 2024-10-07 141909](https://github.com/user-attachments/assets/46069a0b-b80b-4c38-bb1d-0569ab4ee9e2)
 
-### **Список запросов транспортных средств с их координатами и удаление**
+### **Vehicle Request List with Coordinates and Deletion**
 
-![Screenshot 2024-09-09 132512](https://github.com/user-attachments/assets/d3aa22d7-c46b-4c9c-bbce-96e9c55b9f1d)
+![Screenshot 2024-10-07 141622](https://github.com/user-attachments/assets/8d369546-d3df-49f2-bdb9-12434bc700b5)
 
-### **Список пользователей и удаление**
+### **User List with Deletion**
 
-![Screenshot 2024-09-09 132615](https://github.com/user-attachments/assets/656016ee-a34f-406b-9109-8ed1abcd6ae5)
+![Screenshot 2024-10-07 141705](https://github.com/user-attachments/assets/0097de7a-0a40-4b36-862f-23207729bbe0)
 
-### **Окно добавления пользователя**
+### **User Addition page**
 
-![Screenshot 2024-09-09 132634](https://github.com/user-attachments/assets/e2cc27d2-794d-41cc-a1f9-4ce72ef928a2)
+![Screenshot 2024-10-07 141717](https://github.com/user-attachments/assets/f856ad0b-c354-4b6d-a7f4-e37ead31c100)
 
-### **Окно авторизации**
+### **Login page**
 
-![Screenshot 2024-09-09 132841](https://github.com/user-attachments/assets/73ac316b-97ce-4e38-ab69-0141d0ed1b7f)
+![Screenshot 2024-10-07 141557](https://github.com/user-attachments/assets/9f596b97-a2a2-4048-9829-798c28aad1eb)
 
 ### Профиль пользователя
-**Авторизован**            |  **Не авторизован**
+**Logged In**            |  **Not Logged In**
 :-------------------------:|:-------------------------:
-![Screenshot 2024-08-28 172831](https://github.com/user-attachments/assets/bf7bf5fd-83c5-474b-92e2-698d6c2748dd) |  ![Screenshot 2024-08-28 172904](https://github.com/user-attachments/assets/d7b757be-d8fc-4f4b-930a-fe0d665feb32)
+![Screenshot 2024-10-07 142324](https://github.com/user-attachments/assets/5b61b23e-c0c0-4f66-924d-5cf65c50d5be)  |  ![Screenshot 2024-10-07 142335](https://github.com/user-attachments/assets/0a87bcf3-c6d4-412e-989d-da52b35707d8)
 
-### **Окно Swagger**
+### **Swagger window**
 
 ![image](https://github.com/user-attachments/assets/94ac7b50-6f50-455d-a86c-7b5e45d5c5db)
 
